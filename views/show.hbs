@@ -1,0 +1,104 @@
+{{> header}}
+
+
+<link rel="stylesheet" type="text/css"  href="/stylesheets/style.css">
+
+<div class="ui main text container segment">
+    <div class="ui huge header">{{topList.name}}</div>
+    <div class="ui top attached">
+        <div class="item">
+            <!--<img class="ui centered rounded image" src="{topList.image}}">-->
+            <div class="content">
+                <span>2017-02-11 2:01 PM</span>
+            </div>
+            <div class="description">
+                <p>{{topList.description}}</p>
+            </div>
+
+
+
+            {{#each topList.lists}}
+            <!--<div class="column">-->
+                <!--<div class="ui segment">-->
+
+                <div class="ui demo segment main text container">
+                    <div class="item">
+
+                        <div class="ui pagination menu">
+                            <a class="active item">
+                                1
+                            </a>
+                            <div class="disabled item">
+                                2
+                            </div>
+                            <a class="item">
+                                3
+                            </a>
+                            <a class="item">
+                                4
+                            </a>
+                            <a class="item">
+                                5
+                            </a>
+                        </div>
+
+
+                        <div class="ui huge header"><h3>{{this.position}}. {{this.posTitle}}</h3></div>
+                        <div class="ui centered rounded image">
+                            <img class="" src="{{this.posImage}}">
+                        </div>
+
+                        <div class="content">
+                            <p class="description">{{this.posDescription}}</p>
+                    <!--<a href="/lists/{this._id}}" class="ui teal button">Show More...</a>-->
+                    </div>
+                </div>
+
+            </div>
+        {{/each}}
+
+
+
+
+            <!--<button class="ui green button" onclick="openbox('unhide'); return false" >Go!</button>-->
+
+            <!--<div id="unhide" class="transparent"><h1 >THIS IS HIDDEN BLOCK!</h1></div>-->
+
+            <!--hide lists/unhide-->
+            <!--<script type="text/javascript">-->
+                <!--function openbox(id){-->
+                    <!--display = document.getElementById(id).style.display;-->
+                    <!--if(display=='block'){-->
+                        <!--document.getElementById(id).style.display='none';-->
+                    <!--}else{-->
+                        <!--document.getElementById(id).style.display='block';-->
+                    <!--}-->
+                <!--}-->
+            <!--</script>-->
+            <!--листаются топы -->
+            <!--var listSchema = new mongoose.Schema({-->
+
+            <!--position: Number,-->
+            <!--posTitle: String,-->
+            <!--posImage: String,-->
+            <!--posDescription: String,-->
+            <!--author: String-->
+
+            <!--});-->
+
+        </div>
+    </div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+{{> footer}}
+

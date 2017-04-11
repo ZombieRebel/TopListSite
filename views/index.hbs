@@ -1,0 +1,48 @@
+{{> header}}
+
+<div class="ui container">
+
+    <div class="ui grid">
+        <div class="row">
+            <div class="column">
+                <div class="ui huge message page grid center aligned">
+                    <h1 class="ui huge header">Topot Top List Creator</h1>
+                    <p> Here you can create a top list on your own taste and theme. You can specify any theme and post any content with no restrictions. You can also use as many positions in the list as you like</p>
+                    <a href="/lists/new" class="ui teal button">Add new Top List</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui three column grid">
+        {{#each topLists}}
+        <div class="column">
+            <div class="ui segment">
+
+            <div class="ui header">{{this.name}} </div>
+            <img class="ui fluid image" src="{{this.image}}">
+            <p class="description">{{this.description}}</p>
+            <a href="/lists/{{this._id}}" class="ui teal button">Show More...</a>
+
+
+            <!--<ul>-->
+                {{!#each this.list}}
+                    <!--<li>{{!this}}</li>-->
+                {{!/each}}
+            <!--</ul>-->
+
+            </div>
+        </div>
+
+    {{/each}}
+
+
+    </div>
+</div>
+
+
+</div>
+
+
+{{> footer}}
+

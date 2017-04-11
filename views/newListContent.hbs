@@ -1,0 +1,27 @@
+{{> header }}
+
+<div class="ui container">
+<h1 class="ui header">Create a New Top List</h1>
+
+<form class="ui form" action="/lists" method="POST">
+
+    <div class="field">
+        <label>List Title</label>
+        <input type="text" name="name" placeholder="name">
+    </div>
+
+    <div class="field">
+        <label>Image URL</label>
+        <input type="text" name="image" placeholder="image">
+    </div>
+        <div class="field">
+            <label>Top List Description</label>
+            <input type="text" name="description" placeholder="description">
+        </div>
+    <button class="ui green button">Submit!</button>
+</form>
+
+</div>
+
+{{> footer }}
+
